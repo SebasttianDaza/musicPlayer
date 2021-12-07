@@ -1,0 +1,86 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-image: linear-gradient(#AD5A29, #FAC02B);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main Principal*/
+.player {
+    min-width: 320px;
+    background-image: linear-gradient(rgb(190, 88, 88), #8824C2 );
+    border-radius: 1rem;
+    padding: 2rem;
+    color: white;
+    box-shadow: 2px 2px 2px black;
+}
+
+/*Cover*/
+.title {
+    margin-top: 0;
+    text-align: center;
+    font-size: 3rem;
+}
+
+/*Player*/
+.artist {
+    margin-top: 0;
+    text-align: center;
+    font-size: 1.5rem;
+}
+/* Cover */
+.cover {
+    max-width: 200px;
+    height: auto;
+    border-radius: .3rem;
+    display: block;
+    margin: 0 auto 1rem auto;
+}
+
+/* Progress */
+.progress-container {
+    height: .5rem;
+    background-color: lightgray;
+    margin-bottom: 1rem;
+    border-radius: .3rem;
+}
+
+.progress {
+    background-color: goldenrod;
+    width: 0%;
+    height: 100%;
+    
+}
+
+/* Controles */
+.controls {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 1rem;
+    border: none;
+    
+}
+
+.controls button {
+    border: none;
+    background-color: transparent;    
+}
+
+.buton {
+    font-size: 3rem;
+    color: white;
+    cursor: pointer;
+}
+
+.buton:hover {
+    color: goldenrod;
+}
