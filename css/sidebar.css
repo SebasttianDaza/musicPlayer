@@ -1,0 +1,25 @@
+:root {
+    --width: 300px;
+    --padding: 10px;
+    --bgcolor: rgb(52, 52, 52);
+    --color: rgb(23, 23, 23);
+    --width-collapsed: 50px;
+}
+
+
+#sidemenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: var(--width);
+    height: 100vh;
+    background-color: var(--bgcolor);
+    color: var(--color);
+    transition: width var(--transition-time);
+    overflow-y: auto;
+    z-index: 1;
+}
+
+
+
+

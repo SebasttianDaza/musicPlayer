@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web Media API</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/sidebar.css">
    <!-- Option 1: Include in HTML -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-    <script defer src="src/app.js"></script>
+    <script defer src="src/app.js" type='module'></script>
 </head>
 <body>
     <main class="player">
@@ -23,7 +24,7 @@
         <p class="artist" id='artist'>Artista</p>
 
         <!-- Audio a escuchar -->
-        <audio src="" id="audio"></audio>
+        <audio src="#" id="audio"></audio>
 
         <!-- Progress -->
         <div class="progress-container">
@@ -42,7 +43,21 @@
                 <i class="bi bi-arrow-right-circle-fill  buton"></i>
             </button>
         </div>
-
     </main>
+    <div id="sidemenu" class="menu-collapsed">
+        <!-- Header -->
+            <div id="header">
+                <div id="profile"><img src="#"></img></div>
+            </div>
+        <!-- Menu -->
+            <div id="menu">
+                <ul class="song" id='songs'>
+                    <!-- <li> <a href="#">Song 1</a> </li>
+                    <li><a href="#">Song 2</a> </li>
+                    <li> <a href="#">Song 3</a></li>  -->
+                </ul>
+            </div>
+        
+    </div>
 </body>
 </html>
