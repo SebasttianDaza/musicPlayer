@@ -7,7 +7,7 @@ import { song } from './matrizMusic.js';
 const img = document.getElementById('img');
 const title = document.getElementById('title');
 const artist = document.getElementById('artist');
-const audio = document.getElementById('audio');
+const audios = document.getElementById('audioSong');
 const progress = document.getElementById('progress');
 const listSongs = document.getElementById('songs');
 
@@ -33,9 +33,10 @@ function loadSong(){
      //*Realizamos un ciclo
      song.forEach((song, index) => {
           //*Cargamos la plantillas
-          document.getElementById('songs').innerHTML += loadSong2(song);
+          document.getElementById('songs').innerHTML += template(song);
           //*Cargamos eventos
-          document.getElementById('persona2').addEventListener('click', () => {
+          let sonidos = document.querySelector('.persona2');
+          sonidos.addEventListener('click', () => {
                playSong(index);
           });
      });
@@ -44,10 +45,10 @@ function loadSong(){
 
 // Funcion para cargar plantilla
 
-function loadSong2(song){
+function template(song){
      //*Plantilla
      let plantilla = `
-          <li> <a id='persona2' href="#">${song.name}</a> </li>
+          <li class ='persona2'  > <a href="#">${song.name}</a> </li>
      `;
 
      return plantilla;
@@ -58,10 +59,11 @@ function loadSong2(song){
 function playSong(index){
      if(index !== isPlaying){
           //*Falta funcion de cambio de clase
+          console.log(index);
           isPlaying = index;
-
-          audio.src = './audio' + song[index].cover;
-          audio.play();
+          audios.src = "./audio/" + song[index].cover;
+          audios.play();
+          document.getElementById('profile').src = song[index].image;
      }
 }
 

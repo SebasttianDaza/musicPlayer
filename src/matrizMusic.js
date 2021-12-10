@@ -3,7 +3,7 @@
 export const song = [{
      name : 'Titanium',
      artist : 'David Guetta',
-     cover : 'PlayHard.mp3',
+     cover : 'Peaches.mp3',
      image : 'https://firebasestorage.googleapis.com/v0/b/emprendeyourlifestyle.appspot.com/o/imageMusic%2FposterTitanium.jpg?alt=media&token=b6eb87ed-b390-4fba-bdb8-37b501dd1447'
 }, {
     name : 'Play Hard (feat. Ne-Yo & Akon) ',
