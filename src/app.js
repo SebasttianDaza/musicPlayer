@@ -21,6 +21,11 @@ const nextBtn = document.getElementById('next');
 
 let isPlaying = null;
 
+//* Recuperar template
+
+const template = document.getElementById('templeta').content;
+const fragment = document.createDocumentFragment();
+
 // Evento de los botones
 
 playBtn.addEventListener('click', () => {
@@ -32,39 +37,36 @@ playBtn.addEventListener('click', () => {
 function loadSong(){
      //*Realizamos un ciclo
      song.forEach((song, index) => {
-          //*Cargamos la plantillas
-          document.getElementById('songs').innerHTML += template(song);
-          //*Cargamos eventos
-          let sonidos = document.querySelector('.persona2');
-          sonidos.addEventListener('click', () => {
-               playSong(index);
-          });
+          template.querySelector('.templa a').textContent = song.name;
+          template.querySelector('.templa a').onclick = 'playSong(index)';
+          const clone = template.cloneNode(true);
+          fragment.appendChild(clone);
+          playSong(index);
+          
      });
+
+     // Funcion para cargar plantilla
+
+     listSongs.appendChild(fragment); 
+
 }
 
 
-// Funcion para cargar plantilla
-
-function template(song){
-     //*Plantilla
-     let plantilla = `
-          <li class ='persona2'  > <a href="#">${song.name}</a> </li>
-     `;
-
-     return plantilla;
-}
 
 //Funcion para reproducir cancion
 
 function playSong(index){
-     if(index !== isPlaying){
-          //*Falta funcion de cambio de clase
-          console.log(index);
-          isPlaying = index;
-          audios.src = "./audio/" + song[index].cover;
-          audios.play();
-          document.getElementById('profile').src = song[index].image;
-     }
+     console.log(index);
+     
+    /* .addEventListener('click', () => {
+          if(index !== isPlaying){
+               isPlaying = index;
+               audios.src = song[index].file;
+               audios.play();
+          }
+     })*/
 }
+
+//*Funcion para cargar cancion llamada
 
 loadSong();

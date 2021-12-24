@@ -6,6 +6,11 @@
     --width-collapsed: 50px;
 }
 
+/* Clase para expandir menu */
+
+.body-expanded{
+    margin-left: var(--width);
+}
 
 #sidemenu {
     position: fixed;
@@ -13,8 +18,15 @@
     left: 0;
     width: var(--width);
     height: 100vh;
-    background-color: var(--bgcolor);
-    color: var(--color);
+    /* CSS Morphismo*/
+    background: rgba( 0, 0, 0, 0.35 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 15px );
+    -webkit-backdrop-filter: blur( 15px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+
+
     transition: width var(--transition-time);
     overflow-y: auto;
     z-index: 1;
@@ -25,11 +37,86 @@
 /* Editar imagen */
 
 #profile img {
+    box-sizing: border-box;
+    border-bottom: solid 1 px var(--color);
     width: 100px;
     height: 100px;
     border-radius: 50%;
     margin: 0 auto;
     display: block;
     padding: .5rem;
+}
+
+ /* *Header, menu btn */
+
+#sidemenu #header #menu-btn {
+   vertical-align: middle;
+   display: inline-block;
+   cursor: pointer;
+   padding: .5rem;
+   width: var(--width-collapsed);
+   box-sizing: border-box;
+}
+
+#sidemenu #header #menu-btn:hover {
+    background-color: var(--color);
+}
+
+#sidemenu #header #menu-btn .btn-hamburger {
+    background-color: #fff;
+    width: 100%;
+    height: 2px;
+    margin: 5px 0;
+}
+
+/* Item */
+
+#sidemenu #menu-items {
+    overflow: hidden;
+}
+
+#sidemenu #menu-items .item {
+    width: var(--width);
+
+}
+
+#songs li a {
+    font-size: 15px;
+    overflow: hidden;
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    padding: .2rem;
+
+}
+
+#songs {
+    padding: var(--padding) ;
+}
+
+
+#songs li {
+    list-style: none;
+}
+
+#songs li a:hover {
+    color : blue;
+}
+
+
+/* Menu expande */
+
+.menu-expanded {
+    width: var(--width);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+}
+
+.menu-expanded #profile img {
+    width: 200px;
+}
+
+
+.menu-collapsed {
+    width: var(--width-collapsed);
 }
 
