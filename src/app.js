@@ -7,7 +7,7 @@ import { song } from './matrizMusic.js';
 const img = document.getElementById('img');
 const title = document.getElementById('title');
 const artist = document.getElementById('artist');
-const audios = document.getElementById('audioSong');
+let audios ;
 const progress = document.getElementById('progress');
 const listSongs = document.getElementById('songs');
 
@@ -23,13 +23,12 @@ let isPlaying = null;
 
 //* Recuperar template
 
-const template = document.getElementById('templeta').content;
 const fragment = document.createDocumentFragment();
 
 // Evento de los botones
 
 playBtn.addEventListener('click', () => {
-     playMusic();
+     
 })
 
 // Funcion para cargar cancion
@@ -37,18 +36,24 @@ playBtn.addEventListener('click', () => {
 function loadSong(){
      //*Realizamos un ciclo
      song.forEach((song, index) => {
-          template.querySelector('.templa a').textContent = song.name;
-          template.querySelector('.templa a').onclick = 'playSong(index)';
-          const clone = template.cloneNode(true);
-          fragment.appendChild(clone);
-          playSong(index);
+          //*Cargamos el template
+          listSongs.innerHTML += template(song, index);
           
      });
 
      // Funcion para cargar plantilla
 
-     listSongs.appendChild(fragment); 
 
+
+}
+
+function template(song, index) {
+      let template = 
+      ` <li class='templa'> <a onclick='${playSong(index)}' class='link' href="#">${song.name}</a> </li>`;
+
+      return template
+
+     
 }
 
 
@@ -56,15 +61,16 @@ function loadSong(){
 //Funcion para reproducir cancion
 
 function playSong(index){
-     console.log(index);
      
-    /* .addEventListener('click', () => {
-          if(index !== isPlaying){
-               isPlaying = index;
-               audios.src = song[index].file;
-               audios.play();
-          }
-     })*/
+     if(index !== isPlaying){
+          isPlaying = index;
+          audios = new Audio(`../audio/Peaches.mp3`);
+          audios.autoPlay = true;
+          audios.play();
+          
+     }
+     audios.play();
+
 }
 
 //*Funcion para cargar cancion llamada
