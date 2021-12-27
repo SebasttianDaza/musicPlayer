@@ -10,7 +10,7 @@ Changing in the player:
 - Interaction with API
 - Search with API 💯💯
   
-![Imagen de Web Site](https://firebasestorage.googleapis.com/v0/b/emprendeyourlifestyle.appspot.com/o/musicPlayer.png?alt=media&token=a947c3ab-4a0e-44f8-aa2b-38da6aeab1fe)
+![Imagen de Web Site](https://firebasestorage.googleapis.com/v0/b/emprendeyourlifestyle.appspot.com/o/musicPlayer.png?alt=media&token=f0ed6788-b113-4aaf-b15a-607625f2380e)
 
 [Music Player 🎶🎶🎶🎶](https://emprendeyourlifestyle.github.io/musicPlayer/)
 
