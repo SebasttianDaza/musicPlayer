@@ -1,6 +1,3 @@
-// Importar matriz de dados
-
-import { song } from './matrizMusic.js';
 
 /**
  * //*Get to elements the music player
@@ -46,29 +43,23 @@ playBtn.addEventListener('click', () => {
 
 // Funcion para cargar cancion
 
-function loadSong(){
-     //*Realizamos un ciclo
+async function loadSong(){
+     const http = new XMLHttpRequest();
+     http.open('GET', '/canciones', true);
+     http.send();
+     http.onreadystatechange =function () {
+          if(this.readyState == 4 && this.status == 200 ) {
+               console.log(this.responseText);
+          }
+     }
+
+  /*//*Realizamos un ciclo
      song.forEach((song, index) => {
           //*Cargamos el template
           listSongs.innerHTML += template(song, index);
           
-     });
-
-     // Funcion para cargar plantilla
-
-
-
+     });*/
 }
-
-function template(song, index) {
-      let template = 
-      ` <li class='templa'> <a onclick='${playSong(index)}' class='link' href="#">${song.name}</a> </li>`;
-
-      return template
-
-     
-}
-
 
 
 //Funcion para reproducir cancion
