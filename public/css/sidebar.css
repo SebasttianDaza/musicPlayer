@@ -8,16 +8,13 @@
 
 /* Clase para expandir menu */
 
-.body-expanded{
-    margin-left: var(--width);
-}
-
 #sidemenu {
     position: fixed;
     top: 0;
-    left: 0;
+    left: -300px;
     width: var(--width);
-    height: 100vh;
+    height: 100%;
+    transition: all 500ms linear;
     /* CSS Morphismo*/
     background: rgba( 0, 0, 0, 0.35 );
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
@@ -25,11 +22,12 @@
     -webkit-backdrop-filter: blur( 15px );
     border-radius: 10px;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
+    
+}
 
-
-    transition: width var(--transition-time);
-    overflow-y: auto;
-    z-index: 1;
+/* Clase activa */
+#sidemenu.active {
+    left: 0;
 }
 
 
@@ -45,28 +43,6 @@
     margin: 0 auto;
     display: block;
     padding: .5rem;
-}
-
- /* *Header, menu btn */
-
-#sidemenu #header #menu-btn {
-   vertical-align: middle;
-   display: inline-block;
-   cursor: pointer;
-   padding: .5rem;
-   width: var(--width-collapsed);
-   box-sizing: border-box;
-}
-
-#sidemenu #header #menu-btn:hover {
-    background-color: var(--color);
-}
-
-#sidemenu #header #menu-btn .btn-hamburger {
-    background-color: #fff;
-    width: 100%;
-    height: 2px;
-    margin: 5px 0;
 }
 
 /* Item */
@@ -103,20 +79,18 @@
     color : blue;
 }
 
+/* Menu Btn */
 
-/* Menu expande */
-
-.menu-expanded {
-    width: var(--width);
-    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+#sidemenu #menu-btn {
+    position: absolute;
+    left: 330px;
+    top: 20px;
+    cursor: pointer;
 }
 
-.menu-expanded #profile img {
-    width: 200px;
+#sidemenu #menu-btn #icon {
+    display: block;
+    width: 40px;
+    text-align: center;
+    font-size: 30px;
 }
-
-
-.menu-collapsed {
-    width: var(--width-collapsed);
-}
-
