@@ -41,4 +41,20 @@
         background-size: contain;
         opacity: 0.3;
     }
+
+    #controls {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 4rem;
+        justify-self: start;
+        align-self: center;
+        width: 100%;
+        height: 50px;
+        background-color: var(--color-tertiary) ;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 0;
+    }
 }
