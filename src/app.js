@@ -36,8 +36,17 @@ function changeSong (data = []) {
 // Agregar events
 
 const playSong = (data = []) => {
-     const audio = new Audio(`assets/audio/${data[0].url}`);
-     audio.play();
+     const audio = new Audio();
+     for(let i = 0; i < data.length; i++) {
+          listSongs[i].addEventListener('click', () => {
+               audio.src = `assets/audio/${data[i].url}`;
+               if(audio.play === true) {
+                    audio.pause();
+               } else {
+                    audio.play();
+               }
+          })
+     }
 }
 
 requestJson();

@@ -9,9 +9,12 @@
     },
     {
         "name" : "Bang Bang (feat, Adam Levine)",
-        "url" : "PlayHard.mp3"
+        "url" : "BangBang.mp3"
     }, {
         "name" : "24k Magic",
+        "url" : "24KMagic.mp3"
+    }, {
+        "name" : "Take Me to Church",
         "url" : "PlayHard.mp3"
     }
 ]

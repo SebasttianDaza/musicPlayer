@@ -138,7 +138,6 @@ main {
     list-style: none;
     width: 89%;
     cursor: pointer;
-    z-index: -1;
 }
 
 .secundarioss:hover {
