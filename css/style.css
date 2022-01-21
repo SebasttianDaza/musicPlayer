@@ -17,12 +17,12 @@ body {
     align-items: center;
     justify-content: flex-start;
     width: auto;
-    height: 100%;
+    height: 100vh;
     padding: 3.5rem;
 }
 
 
-body::after {
+body::before {
     content: "";
     position: fixed;
     top: 0;
@@ -100,7 +100,9 @@ main {
     justify-self: flex-start;
 }
 
-#primero {
+
+
+.primero {
     list-style: none;
     text-transform: uppercase;
     font-size: 1.6rem;
@@ -112,12 +114,12 @@ main {
     transition: all 1s ;
 }
 
-#primero:hover {
+.primero:hover {
     color: rgba(216, 168, 12, 0.925);
     transform: scale(1.1);
 }
 
-#songs .secundarios {
+.secundarios {
     font-size: 1.4rem;
     text-transform: uppercase;
     opacity: 0.4;
@@ -131,18 +133,10 @@ main {
     text-shadow: 1px 1px 2px white;
 }
 
-#songs .secundarioss {
-    font-size: 1.3rem;
-    text-transform: uppercase;
-    opacity: 0.2;
-    list-style: none;
-    width: 89%;
-    cursor: pointer;
-}
 
-.secundarioss:hover {
-    text-shadow: 1px 1px 1px white;
-}
+
+
+
 
 #controls {
     display: grid;
