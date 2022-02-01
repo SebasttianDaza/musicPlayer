@@ -6,11 +6,11 @@
 }
 
 /* How the with sea igual o menor a 400px */
-@media (max-width: 400px) {
+@media screen and (max-width: 600px) {
     
     body {
         display: flex;
-        width: 100%;
+        width: 100vw;
         height: auto;
         padding: 1.9rem;
     }
@@ -19,12 +19,31 @@
         opacity: 0.3;
     }
 
-    #controls div {
-        display: flex;
-        align-items: center;
-        height: 2rem;
+    main {
+        height: auto;
+        width: 100vw;
     }
 
+    #songs {
+        height: 60vh;
+    }
+
+    #controls {
+        width: 100vw;
+        height: 5rem;
+        padding-left: .5rem;
+        padding-right: .5rem;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        background-color: #470C0F;
+        z-index: 2;
+        align-items: center;
+        justify-items: center;
+        border-top: 1px solid white;
+    }
+
+   
     #play {
         font-size :3rem;
     
@@ -37,8 +56,3 @@
 
 /* How the height sea igual o menor a 560px */
 
-@media (max-height: 560px) {
-    body {
-        height: auto;
-    }
-}

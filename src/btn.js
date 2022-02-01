@@ -1,18 +1,19 @@
-import { audio } from "./app.js";
+import { audio, play } from "./app.js";
+import { changeClassPlay } from "./change-Class.js";
 
-export function playPauseSongBeen (btnPlay) {
-    
-    const minuteExact = 0;
-    
+export function playPauseSongBeen (btnPlay, e, firstSong) {
+
+    let time;
+
     if ( btnPlay === true) {
         btnPlay = false;
-        
         audio.pause();
-
-    }
-    else if ( btnPlay === false) {
-        btnPlay = true;
-        audio.play();
-    }
+        time = audio.currentTime;
+        
+        changeClassPlay(btnPlay);
+        
+    } 
+    
+    
+    
 }
-

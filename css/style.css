@@ -1,3 +1,4 @@
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -168,28 +169,8 @@ main {
     cursor: pointer;
 }
 
-@media screen and (max-width: 400px ) {
+/* Transiccion al btn play */
 
-    body {
-        width: 100vw;
-    }
-
-    main {
-        height: auto;
-        width: 100vw;
-    }
-
-
-    #controls {
-        width: 100vw;
-        height: 65px;
-        position: fixed;
-        left: 0;
-        bottom: 0;
-        background-color: #470C0F;
-        z-index: 2;
-        align-items: center;
-        justify-items: center;
-        border-top: 1px solid white;
-    }
+#play {
+    transition: all 1s;
 }
