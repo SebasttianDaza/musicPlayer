@@ -1,24 +1,32 @@
 import { changeSongListDom } from "./changeSong.js";
+import { loadSong, btnPlay, actualSong } from "./loadSong.js";
 import { playPauseSongBeen } from "./btn.js";
-import { changeClassPlay, changeClassList } from "./change-Class.js";
+import { changeNextSong, changePrevSong } from "./nextPrev-Btn.js";
+import { saveSongLocalStorage } from "./saveSong-Local.js";
 
 // Change elements a variables
 
 const listSongs = document.querySelectorAll('#change li');
 const save = document.getElementById('guardar');
-const play = document.getElementById('play');
-const prev = document.getElementById('prev');
-const next = document.getElementById('next');
-
 
 // Leer documnento Json en Js
 document.addEventListener("click", (e) => {
      if ( e.target.matches("#play")){
           playPauseSongBeen(btnPlay, e);
      }
+     if (e.target.matches("#next")) {
+          changeNextSong(actualSong);
+     }
+     if (e.target.matches("#prev")) {
+          changePrevSong(actualSong);
+     }
+     if (e.target.matches("#guardar")) {
+          saveSongLocalStorage();
+     }
 })
 
 
+// Each Json
 
 function requestJson () {
      fetch('src/song.json')
@@ -31,43 +39,25 @@ function requestJson () {
 }
 
 
-
-//Var been
-
-let actualSong = null;
-
-let btnPlay = false;
-
+//Var been audio
 const audio = new Audio();
 
+// Events of to list
 
-
-export const playSongList = (data = []) => {
+const playSongList = (data = []) => {
   
   for (let i = 0; i < data.length; i++) {
-
-    listSongs[i].addEventListener("click", (e) => {
+     listSongs[i].addEventListener("click", (e) => {
           e.stopPropagation();
-
           audio.src = `assets/audio/${data[i].url}`;
-
-          if (i !== actualSong) {
-               changeClassList(actualSong, e);
-
-               audio.play();
-               btnPlay = true;
-               changeClassPlay(btnPlay);
-               
-               actualSong = i;
-          }
-    });
+          loadSong(i, e, audio);
+          
+     });
   }
 };
 
-// Cambio de clases
 
-
-
-export { actualSong, btnPlay, listSongs, audio, play};
+// Export Var
+export { listSongs, audio};
 
 requestJson();
