@@ -1,7 +1,7 @@
 import { changeSongListDom } from "./changeSong.js";
 import { loadSong, btnPlay, actualSong } from "./loadSong.js";
 import { playPauseSongBeen } from "./btn.js";
-import { changeNextSong, changePrevSong } from "./nextPrev-Btn.js";
+import { changeNextSong, changePrevSong, barraTop } from "./nextPrev-Btn.js";
 import { saveSongLocalStorage } from "./saveSong-Local.js";
 
 // Change elements a variables
@@ -21,7 +21,11 @@ document.addEventListener("click", (e) => {
           changePrevSong(actualSong);
      }
      if (e.target.matches("#guardar")) {
-          saveSongLocalStorage();
+          saveSongLocalStorage(barra);
+     }
+     if (e.target.matches("#top")) {
+          const barra = document.getElementById("bar");
+          barraTop(barra, e);
      }
 })
 

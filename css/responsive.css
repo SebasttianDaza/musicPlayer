@@ -29,20 +29,12 @@
     }
 
     #controls {
-        width: 100vw;
-        height: 5rem;
-        padding-left: .5rem;
-        padding-right: .5rem;
-        position: fixed;
-        left: 0;
-        bottom: 0;
-        background-color: #470C0F;
-        z-index: 2;
-        align-items: center;
-        justify-items: center;
-        border-top: 1px solid white;
+        grid-gap: 2rem;
     }
 
+    #controls div i {
+        animation: changeColor 1s infinite;
+    }
    
     #play {
         font-size :3rem;
@@ -51,6 +43,16 @@
 
     .normal {
         font-size: 1.4rem;
+    }
+
+    .left {
+        border-right: none;
+        border-bottom: 1px solid white;
+    }
+
+    .right {
+        border-left: none;
+        border-top: 1px solid white;
     }
 }
 

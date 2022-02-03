@@ -18,3 +18,13 @@ export function changePrevSong (beforeSong) {
     }
     listSongs[prevSong].click();
 }
+
+export function barraTop (barra, e) {
+    barra.classList.toggle("is-active");
+    if (e.target.classList.contains("ri-eject-line")) {
+        e.target.classList.replace("ri-eject-line", "ri-eject-fill");
+    } else {
+        e.target.classList.replace("ri-eject-fill", "ri-eject-line");
+    }
+    
+}
