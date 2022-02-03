@@ -29,7 +29,8 @@
     }
 
     #controls {
-        grid-gap: 2rem;
+        height: 10vh;
+        grid-gap: 1rem;
     }
 
     #controls div i {
@@ -43,6 +44,14 @@
 
     .normal {
         font-size: 1.4rem;
+    }
+
+    .barra {
+        height: 10vh;
+    }
+
+    #letter {
+        height: 90vh;
     }
 
     .left {
