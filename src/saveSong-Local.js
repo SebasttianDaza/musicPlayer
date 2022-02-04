@@ -1,4 +1,7 @@
+import { actualSong } from "./loadSong.js"
+import { listSongs } from "./app.js"
 
-export function saveSongLocalStorage (barra) {
-    console.log("Guardar canciones en localStorage");
+
+export function saveSongLocalStorage () {
+    
 }

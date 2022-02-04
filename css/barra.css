@@ -1,0 +1,35 @@
+#letter {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    margin: 0 auto;
+    max-width: 100%;
+    width: 90%;
+    height: 85vh;
+}
+
+.left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    border-right: 1px solid white;
+}
+
+#listSave {
+    display: block;
+    height: 70%;
+    width: 80%;
+    overflow-y: scroll;   
+    margin: 2rem 0 2rem 0;
+}
+
+.save {
+    display: block;
+    width: 100%;
+    height: 3rem;
+}
+
+.right {
+    border-left: 1px solid white;
+}

@@ -11,7 +11,7 @@
     body {
         display: flex;
         width: 100vw;
-        height: auto;
+        height: 100vh;
         padding: 1.9rem;
     }
 
@@ -63,6 +63,12 @@
         border-left: none;
         border-top: 1px solid white;
     }
+
+    .left {
+        height: 50%;
+    }
+
+    
 }
 
 /* How the height sea igual o menor a 560px */
