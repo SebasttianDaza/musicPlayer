@@ -21,7 +21,8 @@ document.addEventListener("click", (e) => {
           changePrevSong(actualSong);
      }
      if (e.target.matches("#guardar")) {
-          saveSongLocalStorage(barra);
+          
+          saveSongLocalStorage( document.querySelector("#listSave"));
      }
      if (e.target.matches("#top")) {
           const barra = document.getElementById("bar");

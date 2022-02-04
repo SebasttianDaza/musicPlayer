@@ -7,7 +7,7 @@
     --color-secondary:rgba(95,10,15,1) ;
     --color-tertiary: #470C0F;
     --color-text: #fffdfd;
-    font-family:'Be Vietnam Pro', sans-serif;;
+    --font-family:'Be Vietnam Pro', sans-serif;;
 }
 
 body {
@@ -20,6 +20,7 @@ body {
     width: 80vw;
     height: 100vh;
     margin: 0 auto;
+    font-family: var(--font-family);
 }
 
 
