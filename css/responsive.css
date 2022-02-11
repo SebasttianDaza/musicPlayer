@@ -55,18 +55,18 @@
     }
 
     .left {
+        height: 45vh;
         border-right: none;
         border-bottom: 1px solid white;
     }
 
     .right {
+        height: 45vh;
         border-left: none;
         border-top: 1px solid white;
     }
 
-    .left {
-        height: 50%;
-    }
+    
 
     
 }

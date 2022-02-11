@@ -146,7 +146,7 @@ section.is-active {
     bottom: 0;
     background-color: #470C0F;
     z-index: 999;
-    transition: all 1s ease-in-out;
+    transition: all .7s ease-in-out;
 }
 
 

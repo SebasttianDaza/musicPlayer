@@ -7,7 +7,8 @@ import { saveSongLocalStorage } from "./saveSong-Local.js";
 // Change elements a variables
 
 const listSongs = document.querySelectorAll('#change li');
-const save = document.getElementById('guardar');
+
+let dataGlobal;
 
 // Leer documnento Json en Js
 document.addEventListener("click", (e) => {
@@ -40,6 +41,8 @@ function requestJson () {
                changeSongListDom(data);
                //Evento para cargar cancion
                playSongList(data);
+               dataGlobal = data;
+               
           })
 }
 
@@ -63,6 +66,6 @@ const playSongList = (data = []) => {
 
 
 // Export Var
-export { listSongs, audio};
+export { listSongs, audio, dataGlobal };
 
 requestJson();
