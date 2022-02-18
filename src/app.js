@@ -4,6 +4,7 @@ import { playPauseSongBeen } from "./btn.js";
 import { changeNextSong, changePrevSong, barraTop } from "./nextPrev-Btn.js";
 import { saveSongLocalStorage } from "./saveSong-Local.js";
 
+
 // Change elements a variables
 
 const listSongs = document.querySelectorAll('#change li');
@@ -40,6 +41,8 @@ function requestJson () {
                changeSongListDom(data);
                //Evento para cargar cancion
                playSongList(data);
+               
+
           })
 }
 
@@ -55,7 +58,7 @@ const playSongList = (data = []) => {
      listSongs[i].addEventListener("click", (e) => {
           e.stopPropagation();
           audio.src = `assets/audio/${data[i].url}`;
-          loadSong(i, e, audio);
+          loadSong(i, e, audio, data);
           
      });
   }

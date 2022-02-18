@@ -1,21 +1,26 @@
 [
     {
         "name" : "Peaches",
-        "url" : "Peaches.mp3"
+        "url" : "Peaches.mp3",
+        "author" : "Justin Bieber"
     },
     {
         "name" : "Play Hard",
-        "url" : "PlayHard.mp3"
+        "url" : "PlayHard.mp3",
+        "author" : "David Guetta"
     },
     {
         "name" : "Bang Bang (feat, Adam Levine)",
-        "url" : "BangBang.mp3"
+        "url" : "BangBang.mp3",
+        "author" : "Knaan"
     }, {
         "name" : "24k Magic",
-        "url" : "24KMagic.mp3"
+        "url" : "24KMagic.mp3",
+        "author" : "Bruno Mars"
     }, {
         "name" : "Take Me to Church",
-        "url" : "PlayHard.mp3"
+        "url" : "PlayHard.mp3",
+        "author" : "Hozier"
     }
 
 ]

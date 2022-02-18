@@ -1,10 +1,11 @@
 import { changeClassPlay, changeClassList } from "./change-Class.js";
+import { requestAPI } from "../Components/API/api.js";
 
 export let actualSong = null;
 export let btnPlay = false;
 
 
-export function loadSong(i, e, audio) {
+export function loadSong(i, e, audio, data) {
   if (i !== actualSong) {
     changeClassList(actualSong, e);
 
@@ -13,5 +14,6 @@ export function loadSong(i, e, audio) {
     changeClassPlay(btnPlay);
 
     actualSong = i;
+    requestAPI(data, actualSong, document.querySelector("#lyrics"));
   }
 }
