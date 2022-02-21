@@ -1,5 +1,5 @@
 import { changeClassPlay, changeClassList } from "./change-Class.js";
-import { requestAPI } from "../Components/API/api.js";
+import { requestAPI } from "./api.js";
 
 export let actualSong = null;
 export let btnPlay = false;

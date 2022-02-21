@@ -19,8 +19,7 @@ export const requestAPI = (data, actualSong, element) => {
 
 
 const loadLyric = (data, element) => {
-    console.log(data.lyrics);
-
+    
     ( data.error ) 
         ? loadError(data.error, element)
         : element.innerHTML = data.lyrics.split("\n").join("<br>");
@@ -30,3 +29,5 @@ const loadLyric = (data, element) => {
 const loadError = (error, element) => {
     element.innerHTML = error;
 }
+
+

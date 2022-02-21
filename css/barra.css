@@ -3,16 +3,16 @@
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     margin: auto auto;
     max-width: 100%;
-    width: 90%;
+    width: 90vw;
     height: 85vh;
 }
 
-.left {
+#left {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
-    width: 100%;
+    height: 85vh;
+    width: 45vw;
     border-right: 1px solid white;
 }
 
@@ -58,23 +58,23 @@
     color: var(--color-text);
 }
 
-.right {
+#right {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
-    width: 100%;
+    height: 85vh;
+    width: 45vw;
     border-left: 1px solid white;
 }
 
 .rightLeter {
-    display: block;
-    text-align: center;
-    max-width: 100%;
     width: 80%;
     height: 70%;
     overflow-y: scroll;
+    overflow-wrap: break-word;
 }
+
+
 
 .rightLeter::-webkit-scrollbar {
     width: .3rem;
