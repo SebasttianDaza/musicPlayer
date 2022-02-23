@@ -57,7 +57,7 @@ const playSongList = (data = []) => {
   for (let i = 0; i < data.length; i++) {
      listSongs[i].addEventListener("click", (e) => {
           e.stopPropagation();
-          audio.src = `assets/audio/${data[i].url}`;
+          audio.src = `${data[i].url}`;
           loadSong(i, e, audio, data);
           
      });

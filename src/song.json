@@ -1,25 +1,25 @@
 [
     {
         "name" : "Peaches",
-        "url" : "Peaches.mp3",
+        "url" : "https://firebasestorage.googleapis.com/v0/b/emprendeyourlifestyle.appspot.com/o/music%2FJustin%20Bieber%20-%20Peaches%20ft.%20Daniel%20Caesar%2C%20Giveon.mp3?alt=media&token=ae547e93-d0ec-45ae-9484-6dd7b46619b6",
         "author" : "Justin Bieber"
     },
     {
         "name" : "Play Hard",
-        "url" : "PlayHard.mp3",
+        "url" : "https://firebasestorage.googleapis.com/v0/b/emprendeyourlifestyle.appspot.com/o/music%2FPlay%20Hard%20ft.%20Ne-Yo%2C%20Akon%20(Official%20Video.mp3?alt=media&token=04040c74-12d7-47ca-9a8f-c8516023189a",
         "author" : "David Guetta"
     },
     {
-        "name" : "Bang Bang (feat, Adam Levine)",
-        "url" : "BangBang.mp3",
-        "author" : "Knaan"
+        "name" : "Industry Baby",
+        "url" : "https://firebasestorage.googleapis.com/v0/b/emprendeyourlifestyle.appspot.com/o/music%2FINDUSTRY%20BABY.mp3?alt=media&token=deae81b8-04ea-46b0-864c-0cff0a3e16de",
+        "author" : "Lil Nas X"
     }, {
         "name" : "24k Magic",
-        "url" : "24KMagic.mp3",
+        "url" : "https://firebasestorage.googleapis.com/v0/b/emprendeyourlifestyle.appspot.com/o/music%2F24K%20Magic.mp3?alt=media&token=37ce99bb-9a74-4270-999d-c2f9f0a3f33f",
         "author" : "Bruno Mars"
     }, {
         "name" : "Take Me to Church",
-        "url" : "PlayHard.mp3",
+        "url" : "https://firebasestorage.googleapis.com/v0/b/emprendeyourlifestyle.appspot.com/o/music%2FTakeMeTurch.mp3?alt=media&token=ee1075ca-b7b3-4fbb-a2ef-b50e3d1a3cdb",
         "author" : "Hozier"
     }
 
